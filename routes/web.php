@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 // views/main
 Route::get('/',[PageController::class,'index'])->name('main.index');
 Route::get('/about',[PageController::class,'about'])->name('main.about');
+
+
+// POSTS endpoints
+Route::get('/posts',[PostController::class,'index'])->name('main.posts.index');
 
 // Laravel.test
 // Route::get('/',[HomeController::class,'index'])->name('main.home');
