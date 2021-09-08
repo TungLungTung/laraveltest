@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -13,6 +14,17 @@ class PostController extends Controller
      */
     public function index()
     {
+        // Các câu truy vấn Query builder
+        $id = 3;
+        //$posts = DB::select('select * from posts where id = ?', [3]);
+
+        $posts = DB::table('posts')
+            ->where('id',$id) // -> select()
+            ->get();
+
+        //$posts = DB::select('select * from posts where id = :id', ['id' => 3]);
+        dd($posts);
+
         return view('main/posts/index');
     }
 

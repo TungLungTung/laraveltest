@@ -5,18 +5,6 @@
     <title>
         Personal Website - Code With Dary
     </title>
-    <link
-        rel="stylesheet"
-        href="style.css"
-    />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap"
-        rel="stylesheet"
-    />
-    <link
-        rel="stylesheet"
-        href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
-    />
 
     <link
         rel="stylesheet"
@@ -29,16 +17,7 @@
 
 </head>
 
-<body>
-    <header>
-        @include('main.layouts.header')
-    </header>
-
+<body class="bg-gradient-to-r from-gray-100 to-gray-200">
     @yield('content')
-
-    <!-- Footer -->
-    <footer>
-        @include('main.layouts.footer')
-    </footer>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
@@ -24,6 +25,10 @@ Route::get('/about',[PageController::class,'about'])->name('main.about');
 
 // POSTS endpoints
 Route::get('/posts',[PostController::class,'index'])->name('main.posts.index');
+
+
+// CAR
+Route::resource('/cars', CarController::class);
 
 // Laravel.test
 // Route::get('/',[HomeController::class,'index'])->name('main.home');
